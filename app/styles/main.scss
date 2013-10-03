@@ -12,13 +12,20 @@ body {
     background: #fafafa;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #333;
-    padding-top:20px;
+    padding-top:40px;
 }
 
 
 .spinners-list-title {
     font-size:2em;
+    display:inline-block;
     margin-bottom:0.5em;
+    vertical-align: -18%;
+}
+
+.logo {
+    margin: 0 3em 0 1em;
+    display:inline-block;
 }
 
 .spinner-page-title {
