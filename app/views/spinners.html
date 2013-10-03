@@ -1,47 +1,49 @@
-<div class="row">
-
-  <div class="col-sm-8">
-    <div class="logo">
-      <div class="dots"></div>
-    </div>
-    <div class="spinners-list-title">CSS Spinners</div>
-  </div>
-
-  <div class="col-sm-4">
-    <div class="input-group spinner-filter">
-      <span class="input-group-addon">Filter</span>
-      <input type="text" class="form-control" placeholder="Start typeing..." ng-model="spinnerFilter" />
-    </div>
-  </div>
-
-</div>
-
-<div class="row">
-
-  <div class="col-sm-4 col-lg-3">
-    <div class="spinners-list-description">
-      <p>Simple CSS spinners and throbbers made with CSS and minimal HTML markup.</p>
-      <p>Get yours today.</p>
-    </div>
-    
-  </div>
-
-  <div class="col-sm-8 col-lg-9">
+<div class="header" ng-controller="SpinnersCtrl">
+  <div class="container">
     <div class="row">
-      <div ng-repeat="spinner in spinners | filter:spinnerFilter"  class="col-xs-6  col-sm-6 col-md-4 col-lg-3 spinner-tile">
-        <a href="#/spinner/{{spinner.id}}" class="spinner-tile-link">
-          <div class="spinner-tile-details">
-            <div>.{{spinner.id}}</div>
-          </div>
-          <div class="card">
-            <div class="{{spinner.id}}">
-              Loading...
-            </div>
-          </div>
-        </a>
+
+      <div class="col-sm-12">
+        <a class="header-title" href="#/">CSS Spinners</a>
+        <div class="header-tagline">
+          <p>{{spinners.length}} simple CSS spinners and throbbers made with CSS and minimal HTML markup.</p>
+        </div>
       </div>
     </div>
   </div>
+</div>
 
+<div class="container spinners-list-page">
+  <div class="row">
+
+    <div class="col-sm-4 col-lg-3 col-sm-push-8 col-lg-push-9">
+       <div class="input-group spinner-filter">
+        <span class="input-group-addon"><i class="icon-zoom"></i></span>
+        <input type="text" class="form-control" placeholder="Filter spinners..." ng-model="spinnerFilter" />
+      </div>
+      <div class="spinners-list-description">
+        <p>Use can use any spinner on your site with only a few lines of code. Or <a href="https://github.com/jlong/css-spinners" target="new">check out the sources</a> on Github and start making your own. All spinners are also available via <a href="http://bower.io/" target="new">bower</a>.</p>
+        <p>Brought to you by <a href="http://wiseheartdesign.com/" target="new">John W. Long</a> <a href="https://twitter.com/johnwlong" target="new"><i class="icon-twitter"></i></a> and <a href="http://kohhofer.com" target="new">Alexander Kohlhofer</a> <a href="http://twitter.com/kohlhofer" target="new"><i class="icon-twitter"></i></a>.</p>
+      </div>
+    </div>
+
+    <div class="col-sm-8 col-lg-9 col-sm-pull-4 col-lg-pull-3">
+      <div class="row">
+        <div ng-repeat="spinner in spinners | filter:spinnerFilter"  class="col-xs-6  col-sm-6 col-md-4 col-lg-3 spinner-tile">
+          <a href="#/spinner/{{spinner.id}}" class="spinner-tile-link">
+            <div class="spinner-tile-details">
+              <div>.{{spinner.id}}</div>
+            </div>
+            <div class="card">
+              <div class="{{spinner.id}}">
+                Loading...
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
 
 </div>

@@ -1,57 +1,59 @@
-<div class="row">
-  <div class="col-sm-8 spinner-navigation">
-    <a href="#/spinner/{{prevSpinner.id}}" class="pull-left"> < {{prevSpinner.name}}</a>
-    <a href="#/spinner/{{nextSpinner.id}}" class="pull-right"> {{nextSpinner.name}} ></a>
-  </div>
-  <div class="col-sm-4">
-    <a href="#/spinners" class="back-to-spinners-link">See all spinnners</a>
+
+<div class="spinner-navigation">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-7">
+        <a href="#/spinner/{{prevSpinner.id}}" class="pull-left"><i class="icon-left"></i> {{prevSpinner.name}}</a>
+        <a href="#/spinner/{{nextSpinner.id}}" class="pull-right"> {{nextSpinner.name}} <i class="icon-right"></i></a>
+      </div>
+      <div class="col-sm-5">
+        <a href="#/spinners" class="back-to-spinners-link"><i class="icon-grid"></i> See all spinnners</a>
+      </div>
+    </div>
   </div>
 </div>
-<div class="row">
-  <div class="col-sm-4 col-sm-push-8">
-    <div class="spinner-page-title">{{spinner.name}}</div>
-    <div class="spinners-page-description">
-      <p>{{spinner.description}}</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-5 col-sm-push-7">
+      <div class="spinner-page-title">{{spinner.name}}</div>
+      <div class="spinner-page-description">
+        <p>{{spinner.description}}</p>
+      </div>
+
+
+      <p><i class="icon-html"></i> HTML</p>
+
+      <pre>&lt;div class=&quot;{{spinner.id}}&quot;&gt;<br/>    Loading...<br/>&lt;/div&gt;</pre>
+
+      
+
+      <p><i class="icon-css"></i> CSS</p>
+
+      <pre ng-show="all == false">&lt;link rel=&quot;stylesheet&quot; href=&quot;http://cssspinners.com/css/spinners/{{spinner.id}}.css&quot; type=&quot;text/css&quot;&gt;</pre>
+
+      <pre ng-show="all == true">&lt;link rel=&quot;stylesheet&quot; href=&quot;http://cssspinners.com/css/spinners.css&quot; type=&quot;text/css&quot;&gt;</pre>
+
+      <div class="checkbox" ng-init="all = false">
+        <label>
+          <input type="checkbox" ng-model="all">
+            Inlcude all spinners
+        </label>
+      </div>
+
+
     </div>
-
-
-  </div>
-  <div class="col-sm-8 col-sm-pull-4">
-    <div class="spinner-preview">
-      <div class="card">
-        <div class="{{spinner.id}}">
-          Loading...
+    <div class="col-sm-7 col-sm-pull-5">
+      <div class="spinner-preview">
+        <div class="card">
+          <div class="{{spinner.id}}">
+            Loading...
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col-sm-6">
-
-        <p>HTML:</p>
-
-        <pre>&lt;div class=&quot;{{spinner.id}}&quot;&gt;<br/>    Loading...<br/>&lt;/div&gt;</pre>
-
-      </div>
-
-      <div class="col-sm-6">
-        <p>CSS:</p>
-
-        <pre ng-show="all == false">&lt;link rel=&quot;stylesheet&quot; href=&quot;http://cssspinners.com/css/spinners/{{spinner.id}}.css&quot; type=&quot;text/css&quot;&gt;</pre>
-
-        <pre ng-show="all == true">&lt;link rel=&quot;stylesheet&quot; href=&quot;http://cssspinners.com/css/spinners.css&quot; type=&quot;text/css&quot;&gt;</pre>
-
-        <div class="checkbox" ng-init="all = false">
-          <label>
-            <input type="checkbox" ng-model="all">
-              Inlcude all spinners
-          </label>
-        </div>
-      </div>
 
     </div>
-
 
   </div>
-
 </div>

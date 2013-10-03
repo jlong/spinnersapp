@@ -9,52 +9,76 @@ html, body {
 }
 
 body {
-    background: #fafafa;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color:#345;
     color: #333;
-    padding-top:40px;
+    font-family: Lato,"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
 }
 
 
-.spinners-list-title {
-    font-size:2em;
-    display:inline-block;
-    margin-bottom:0.5em;
-    vertical-align: -18%;
+
+.header {
+    padding:5em 0 3em;
+    background-color:#e56245;
+
 }
 
-.logo {
-    margin: 0 3em 0 1em;
-    display:inline-block;
+.page-content {
+    background-color: #EEE;
+    padding-bottom:3em;
+}
+
+.spinners-list-page {
+    padding-top:2em;
+}
+
+
+.header-title {
+    font-size:5em;
+    font-family: Lato,sans-serif;
+    font-weight: 700;
+    color:rgba(255,255,255,1);
+    &:hover {
+        color:rgba(255,255,255,1);
+        text-decoration:none;
+    }
+}
+
+.header-tagline {
+    font-family: Lato,sans-serif;
+    font-weight: 300;
+    font-size:1.4em;
+    line-height: 1.5em;
+    color:rgba(255,255,255,0.8);
 }
 
 .spinner-page-title {
     font-size:2em;
-}
+    font-family: Lato,sans-serif;
+    font-weight: 700;
 
-.back-to-spinners-link {
-    display:inline-block;
-    font-size:1.1em;
-    margin-bottom:1em;
-    &:hover {
-        background-color:#DDD;
-    }
 }
 
 
 .spinners-list-description {
-    margin-top: 1em;
     font-size:1.1em;
     line-height: 1.5em;
-    color:#999;
+    color:#666;
+    margin-bottom:1.5em;
 }
 
-.spinners-page-description {
-    font-size:1.1em;
+.spinner-page-description {
+    font-size:1.2em;
     line-height: 1.5em;
-    font-weight:bold;
     color:#666;
+    margin-bottom:1.5em;
 }
+
+.icon-twitter {
+    border-left:1px solid #DDD;
+    padding-left:5px;
+}
+
 
 
 .spinner-tile {
@@ -85,7 +109,7 @@ body {
         display: table-cell;
         text-align: center;
         vertical-align: middle;
-        height: 300px;
+        height: 350px;
     }
 }
 
@@ -96,10 +120,10 @@ body {
     width:100%;
     background-color:#FFF;
     display: table;
-    padding-bottom:20px;
-    border:1px solid #DDD;
+    padding-bottom:10px;
+    border:1px solid #CCC;
     &:hover {
-        border:1px solid #AAA;
+        border:1px solid #999;
     }
     .card {
         display: table-cell;
@@ -112,6 +136,17 @@ body {
 
 
 .spinner-navigation {
+    background-color:#e56245;
+    padding:1em 0;
+    font-weight:300;
+    margin-bottom:2em;
+    a {
+        color:#FFF;
+    }
+    a:hover {
+        color:#FFF;
+        text-decoration:none;
+    }
 }
 
 
@@ -126,9 +161,8 @@ body {
 // footer 
 
 .footer-section {
-  padding:4em 0;
+  padding:1em 0 4em 0;
   margin-top: 4em;
-  background-color:#345;
   color:rgba(255,255,255,0.3);
   font-family: 'Lato', sans-serif;
   font-weight:300;

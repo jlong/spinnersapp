@@ -11,9 +11,12 @@
   <meta name="viewport" content="width=device-width">
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-      <!-- build:css(.tmp) styles/main.css -->
-      <link rel="stylesheet" href="styles/main.css">
-      <!-- endbuild -->
+  <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/icon-font.css">
+  <!-- endbuild -->
 </head>
   <body ng-app="spinnersappApp">
     <!--[if lt IE 7]>
@@ -26,7 +29,11 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container" ng-view=""></div>
+    
+
+    <div class="page-content">
+      <div ng-view=""></div>
+    </div>
 
 
 
@@ -38,7 +45,7 @@
               You can check out the <a href="https://github.com/jlong/css-spinners" target="new">css-spinners source code on github</a>. Add your own today!
             </p>
             <p class="copy-right-notice">
-              Brought to you by John W. Long with support from <a href="http://kohlhofer.com" target="new">Alexander Kohlhofer</a><br /> License text and link goes here...
+              Brought to you by <a href="http://wiseheartdesign.com/" target="new">John W. Long</a> &amp; <a href="http://kohlhofer.com" target="new">Alexander Kohlhofer</a>
             </p>
           </div>
           <div class="col-sm-7 col-sm-offset-1 col-md-6 col-md-offset-2">
