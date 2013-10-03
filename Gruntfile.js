@@ -276,7 +276,15 @@ module.exports = function (grunt) {
             'images/{,*/}*.{gif,webp}',
             'styles/fonts/*'
           ]
-        }, {
+        },{
+          expand: true,
+          dot: true,
+          cwd: '<%= yeoman.app %>/bower_components/css-spinners/css/',
+          dest: '<%= yeoman.dist %>/css',
+          src: [
+            '**/*'
+          ]
+        },{
           expand: true,
           cwd: '.tmp/images',
           dest: '<%= yeoman.dist %>/images',
