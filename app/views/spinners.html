@@ -1,7 +1,27 @@
 <div class="row">
 
-  <div class="col-sm-12">
-   Spinners <a href="#/spinner/2">Open one!</a>
+  <div class="col-sm-4 col-lg-2">
+    <h1>CSS Spinners</h1>
+    <p>Simple CSS spinners and throbbers made with CSS and minimal HTML markup.</p>
+    <input type="text" class="form-control" placeholder="Filter spinners..." ng-model="spinnerFilter" />
   </div>
+
+  <div class="col-sm-8 col-lg-10">
+    <div class="row">
+      <div ng-repeat="spinner in spinners | filter:spinnerFilter"  class="col-xs-6 col-sm-4 col-md-3 spinner-tile">
+        <a href="#/spinner/{{spinner.id}}" class="spinner-tile-link">
+          <div class="spinner-tile-details">
+            <div>{{spinner.name}}</div>
+          </div>
+          <div class="card">
+            <div class="{{spinner.className}}">
+              Loading...
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
 
 </div>

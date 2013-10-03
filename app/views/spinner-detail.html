@@ -1,9 +1,43 @@
-Hey!
-
 <div class="row">
-
   <div class="col-sm-12">
-    Details! <a href="#/spinners">Back!</a>
+    <a href="#/spinners" class="btn btn-default pull-right">X</a>
+  </div>
+  <div class="col-sm-4">
+    <h1>{{spinner.name}}</h1>
+    <p>{{spinner.description}}</p>
+
+
+  </div>
+  <div class="col-sm-8">
+    <div class="spinner-preview">
+      <div class="card">
+        <div class="{{spinner.className}}">
+          Loading...
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <p>All spinners are designed to be used with the same simple markup. Please note the custom class:</p>
+
+      <pre>&lt;div class=&quot;{{spinner.className}}&quot;&gt;<br/>    Loading...<br/>&lt;/div&gt;</pre>
+
+      <p>Simply link to the appropriate file:</p>
+
+      <pre ng-show="all == false">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://rawgithub.com/jlong/css-spinners/master/css/spinners/{{spinner.className}}.css&quot; type=&quot;text/css&quot;&gt;</pre>
+
+      <pre ng-show="all == true">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://rawgithub.com/jlong/css-spinners/master/css/spinners.css&quot; type=&quot;text/css&quot;&gt;</pre>
+
+      <div class="checkbox" ng-init="all = false">
+        <label>
+          <input type="checkbox" ng-model="all">
+            Inlcude all spinners
+        </label>
+      </div>
+
+    </div>
+
+
   </div>
 
 </div>

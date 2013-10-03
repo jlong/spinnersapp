@@ -9,7 +9,7 @@ angular.module('spinnersappApp', ['ngRoute','spinnersappApp.services'])
       })
       .when('/spinner/:spinner/', {
         templateUrl: 'views/spinner-detail.html',
-        controller: 'SpinnersCtrl'
+        controller: 'SpinnersDetailsCtrl'
       })
       .otherwise({
         redirectTo: '/spinners'
