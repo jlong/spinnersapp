@@ -1,13 +1,20 @@
 'use strict';
 
-angular.module('spinnersappApp', [])
+angular.module('spinnersappApp', ['ngRoute','spinnersappApp.services'])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+      .when('/spinners/', {
+        templateUrl: 'views/spinners.html',
+        controller: 'SpinnersCtrl'
+      })
+      .when('/spinner/:spinner/', {
+        templateUrl: 'views/spinner-detail.html',
+        controller: 'SpinnersCtrl'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/spinners'
       });
   });
+
+
+var servicesModule = angular.module('spinnersappApp.services', []);
