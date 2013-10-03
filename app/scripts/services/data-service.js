@@ -102,7 +102,7 @@ servicesModule.factory('Data', [function() {
     {
       id: "ball",
       name: "Ball",
-      description: "ball..."
+      description: "A bouncing ball."
     }
   ];
 
