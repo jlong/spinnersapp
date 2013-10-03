@@ -5,10 +5,19 @@
 servicesModule.factory('Data', [function() {
 
 
-  this.spinner = function (id) {
+  this.spinner = function (id,which) {
     for (var i = 0; i < spinners.length; i++) {
       if (spinners[i].id == id) {
-        return spinners[i];
+        if (!which) {
+          return spinners[i];
+        } else if (which == 'next') {
+          if (i == 0) { i = spinners.length; }
+          return spinners[i-1];
+        } else if (which == 'prev') {
+          if (i == spinners.length-1) { i = -1; }
+          return spinners[i+1];
+          
+        }
       }
     }
   }
