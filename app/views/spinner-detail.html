@@ -15,7 +15,7 @@
   <div class="col-sm-8 col-sm-pull-4">
     <div class="spinner-preview">
       <div class="card">
-        <div class="{{spinner.className}}">
+        <div class="{{spinner.id}}">
           Loading...
         </div>
       </div>
@@ -26,16 +26,16 @@
 
         <p>HTML:</p>
 
-        <pre>&lt;div class=&quot;{{spinner.className}}&quot;&gt;<br/>    Loading...<br/>&lt;/div&gt;</pre>
+        <pre>&lt;div class=&quot;{{spinner.id}}&quot;&gt;<br/>    Loading...<br/>&lt;/div&gt;</pre>
 
       </div>
 
       <div class="col-sm-6">
         <p>CSS:</p>
 
-        <pre ng-show="all == false">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://rawgithub.com/jlong/css-spinners/master/css/spinners/{{spinner.className}}.css&quot; type=&quot;text/css&quot;&gt;</pre>
+        <pre ng-show="all == false">&lt;link rel=&quot;stylesheet&quot; href=&quot;http://cssspinners.com/css/spinners/{{spinner.id}}.css&quot; type=&quot;text/css&quot;&gt;</pre>
 
-        <pre ng-show="all == true">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://rawgithub.com/jlong/css-spinners/master/css/spinners.css&quot; type=&quot;text/css&quot;&gt;</pre>
+        <pre ng-show="all == true">&lt;link rel=&quot;stylesheet&quot; href=&quot;http://cssspinners.com/css/spinners.css&quot; type=&quot;text/css&quot;&gt;</pre>
 
         <div class="checkbox" ng-init="all = false">
           <label>

@@ -5,17 +5,6 @@
 servicesModule.factory('Data', [function() {
 
 
-  // UUID helper functions
-  var s4 = function () {
-    return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
-  };
-
-  var guid = function () {
-    return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
-  }
-
-  
-
   this.spinner = function (id) {
     for (var i = 0; i < spinners.length; i++) {
       if (spinners[i].id == id) {
@@ -34,60 +23,79 @@ servicesModule.factory('Data', [function() {
     {
       id: "spinner",
       name: "Spinner",
-      className: "spinner",
-      description: "Spinning circles",
-      cssURL: "https://rawgithub.com/jlong/spinners/master/css/spinner/spinner.css",
-      rawsass: "coming sooner!",
-      rawcss: "loading"
+      description: "Spinning circles"
     },
     {
       id: "throbber",
       name: "Throbber",
-      className: "throbber",
-      description: "Animated Facebook-like throbber.",
-      cssURL: "https://rawgithub.com/jlong/spinners/master/css/spinner/throbber.css",
-      rawsass: "coming sooner!",
-      rawcss: "loading"
+      description: "Animated Facebook-like throbber."
     },
     {
       id: "refreshing",
       name: "Refreshing",
-      className: "refreshing",
-      description: "Circular spinning arrow. Great for refreshing content.",
-      cssURL: "https://rawgithub.com/jlong/spinners/master/css/spinner/refreshing.css",
-      rawsass: "coming sooner!",
-      rawcss: "loading"
+      description: "Circular spinning arrow. Great for refreshing content."
     },
     {
       id: "heartbeat",
       name: "Heartbeat",
-      className: "heartbeat",
-      description: "Animated beating heart.",
-      cssURL: "https://rawgithub.com/jlong/spinners/master/css/spinner/heartbeat.css",
-      sass: "coming sooner!",
-      rawcss: "loading"
+      description: "Animated beating heart."
     },
     {
       id: "gauge",
       name: "Gauge",
-      className: "gauge",
-      description: "Animated speedometer-like gauge with rotating needle.",
-      cssURL: "https://rawgithub.com/jlong/spinners/master/css/spinner/gauge.css",
-      rawsass: "coming sooner!",
-      rawcss: "loading"
+      description: "Animated speedometer-like gauge with rotating needle."
     },
     {
       id: "timer",
       name: "Timer",
-      className: "timer",
-      description: "Animated clock with spinning hands.",
-      cssURL: "https://rawgithub.com/jlong/spinners/master/css/spinner/timer.css",
-      rawsass: "coming sooner!",
-      rawcss: "loading"
+      description: "Animated clock with spinning hands."
+    },
+    {
+      id: "three-quarters",
+      name: "Three Quarters",
+      description: "Minimal three-quarters donut spinner."
+    },
+    {
+      id: "wobblebar",
+      name: "Wobblebar",
+      description: "Animated wobbling progress bar."
+    },
+    {
+      id: "atebits",
+      name: "Atebits",
+      description: "Staight out of Letterpress, an animated rotating Atebits logo."
+    },
+    {
+      id: "whirly",
+      name: "Whirly",
+      description: "A comet-like rotating spinner."
+    },
+    {
+      id: "flower",
+      name: "Flower",
+      description: "An animated spinning flower."
+    },
+    {
+      id: "dots",
+      name: "Dots",
+      description: "Almost a rotating shell game. With dots!"
+    },
+    {
+      id: "circles",
+      name: "Circles",
+      description: "Three rotating multi-colored circles."
+    },
+    {
+      id: "plus",
+      name: "Plus",
+      description: "Animated Google Plus-like loader."
+    },
+    {
+      id: "ball",
+      name: "Ball",
+      description: "ball..."
     }
   ];
-
-  
 
   return this;
 
