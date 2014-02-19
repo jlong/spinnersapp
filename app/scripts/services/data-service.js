@@ -40,11 +40,6 @@ servicesModule.factory('Data', [function() {
       description: "Animated Facebook-like throbber."
     },
     {
-      id: "refreshing",
-      name: "Refreshing",
-      description: "Circular spinning arrow. Great for refreshing content."
-    },
-    {
       id: "heartbeat",
       name: "Heartbeat",
       description: "Animated beating heart."
