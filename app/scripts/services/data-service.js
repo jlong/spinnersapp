@@ -98,11 +98,6 @@ servicesModule.factory('Data', [function() {
       id: "plus",
       name: "Plus",
       description: "Animated Google Plus-like loader."
-    },
-    {
-      id: "ball",
-      name: "Ball",
-      description: "A bouncing ball."
     }
   ];
 
