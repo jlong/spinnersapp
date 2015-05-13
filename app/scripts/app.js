@@ -17,4 +17,4 @@ angular.module('spinnersappApp', ['ngRoute','spinnersappApp.services'])
   });
 
 
-var servicesModule = angular.module('spinnersappApp.services', []);
+angular.module('spinnersappApp.services', []);

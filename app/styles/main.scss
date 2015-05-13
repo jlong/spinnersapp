@@ -1,7 +1,7 @@
 $iconSpritePath: "../images/glyphicons-halflings.png";
 $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 
-@import "bootstrap-sass/lib/bootstrap";
+@import "bootstrap-sass/assets/stylesheets/bootstrap";
 @import "css-spinners/sass/spinners";
 
 /* Put your CSS here */
@@ -84,6 +84,8 @@ body {
 
 
 .spinner-tile {
+    display: table;
+    width:100%;
     margin-bottom:$grid-gutter-width;
 }
 
@@ -100,18 +102,17 @@ body {
 }
 
 .spinner-preview {
-    display: block;
+    display: table;
     width:100%;
     text-align:center;
     background-color:#FFF;
     border:1px solid #DDD;
-    display: table;
     margin-bottom:$grid-gutter-width;
     .card {
         display: table-cell;
         text-align: center;
         vertical-align: middle;
-        height: 350px;
+        height: 400px;
     }
 }
 
