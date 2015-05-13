@@ -1,6 +1,8 @@
 'use strict';
 
-angular.module('spinnersappApp.services').factory('Data', [function() {
+angular.module('spinnersApp')
+
+.factory('Data', [function() {
 
   this.spinner = function (id,which) {
     for (var i = 0; i < spinners.length; i++) {
@@ -106,4 +108,6 @@ angular.module('spinnersappApp.services').factory('Data', [function() {
   ];
 
   return this;
-}]);
+}])
+
+;
