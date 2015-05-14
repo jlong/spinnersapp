@@ -1,9 +1,8 @@
 <div class="header" ng-controller="SpinnersCtrl">
   <div class="container">
     <div class="row">
-
       <div class="col-sm-12">
-        <a class="header-title" href="#/">CSS Spinners</a>
+        <a class="header-title" href="/">CSS Spinners</a>
         <div class="header-tagline">
           <p>{{spinners.length}} simple CSS spinners and throbbers made with CSS and minimal HTML markup.</p>
         </div>
@@ -14,7 +13,6 @@
 
 <div class="container spinners-list-page">
   <div class="row">
-
     <div class="col-sm-4 col-lg-3 col-sm-push-8 col-lg-push-9">
        <div class="input-group spinner-filter">
         <span class="input-group-addon"><i class="icon-zoom"></i></span>
@@ -30,13 +28,13 @@
       <div class="row">
         <div ng-repeat="spinner in spinners | filter:spinnerFilter"  class="col-xs-6  col-sm-6 col-md-4 col-lg-3">
           <div class="spinner-tile">
-            <a href="#/spinner/{{spinner.id}}" class="spinner-tile-link">
+            <a href="/spinner/{{spinner.id}}" class="spinner-tile-link">
               <div class="card">
                 <div class="spinner-tile-details">
                   <div>.{{spinner.id}}-loader</div>
                 </div>
                 <div class="{{spinner.id}}-loader">
-                  Loading...
+                  Loading&#8230;
                 </div>
               </div>
             </a>
@@ -44,8 +42,5 @@
         </div>
       </div>
     </div>
-
-
   </div>
-
 </div>

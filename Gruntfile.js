@@ -13,6 +13,10 @@ var mountFolder = function (connect, dir) {
 // 'test/spec/**/*.js'
 
 module.exports = function (grunt) {
+  var modRewrite = require('connect-modrewrite')
+  ,   modRewriteMiddleware = modRewrite(['![^\\.]*$ /index.html [L]'])
+  ;
+
   require('load-grunt-tasks')(grunt);
   require('time-grunt')(grunt);
 
@@ -79,6 +83,7 @@ module.exports = function (grunt) {
           middleware: function (connect) {
             return [
               lrSnippet,
+              modRewriteMiddleware,
               mountFolder(connect, '.tmp'),
               mountFolder(connect, yeomanConfig.app)
             ];
@@ -89,6 +94,7 @@ module.exports = function (grunt) {
         options: {
           middleware: function (connect) {
             return [
+              modRewriteMiddleware,
               mountFolder(connect, '.tmp'),
               mountFolder(connect, 'test')
             ];
@@ -99,6 +105,7 @@ module.exports = function (grunt) {
         options: {
           middleware: function (connect) {
             return [
+              modRewriteMiddleware,
               mountFolder(connect, yeomanConfig.dist)
             ];
           }

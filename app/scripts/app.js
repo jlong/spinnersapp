@@ -2,19 +2,21 @@
 
 angular.module('spinnersApp', ['ngRoute'])
 
-.config(function ($routeProvider) {
+.config(function($routeProvider, $locationProvider) {
   $routeProvider
-    .when('/spinners/', {
+    .when('/', {
       templateUrl: 'views/spinners.html',
       controller: 'SpinnersCtrl'
     })
-    .when('/spinner/:spinner/', {
+    .when('/spinner/:spinner', {
       templateUrl: 'views/spinner-detail.html',
       controller: 'SpinnersDetailsCtrl'
     })
     .otherwise({
-      redirectTo: '/spinners'
+      redirectTo: '/'
     });
+
+  $locationProvider.html5Mode(true);
 })
 
 ;

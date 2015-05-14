@@ -1,5 +1,8 @@
 {
   "name": "css-spinners",
   "root": "./dist/",
-  "clean_urls": true
+  "clean_urls": true,
+  "routes": {
+    "/*.html": "index.html"
+  }
 }
