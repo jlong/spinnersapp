@@ -31,15 +31,28 @@
       <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
-    
-
     <div class="page-content">
-      <div ng-view=""></div>
+      <div ng-view="">
+        <div class="header" ng-controller="SpinnersCtrl">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <a class="header-title" href="/">CSS Spinners</a>
+                <div class="header-tagline">
+                  <p>Simple CSS spinners and throbbers made with CSS and minimal HTML markup.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container spinners-list-page text-center">
+          <div class="spinner-loader">
+            Loading&#8230;
+          </div>
+        </div>
+      </div>
     </div>
-
-
-
     <div class="footer-section">
       <div class="container">
         <div clas="row">
