@@ -104,6 +104,16 @@ angular.module('spinnersApp')
       id: 'hexdots',
       name: 'Hexdots',
       description: 'Similar to Dots, but with six!'
+    },
+    {
+      id: 'inner-circles',
+      name: 'Inner Circles',
+      description: 'A filling circle with other circles.'
+    },
+    {
+      id: 'pong',
+      name: 'Pong',
+      description: 'Retro tennis-like game simulation from the 70s.'
     }
   ];
 
