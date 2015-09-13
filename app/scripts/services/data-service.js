@@ -114,6 +114,11 @@ angular.module('spinnersApp')
       id: 'pong',
       name: 'Pong',
       description: 'Retro tennis-like game simulation from the 70s.'
+    },
+    {
+      id: 'pulse',
+      name: 'Pulse',
+      description: 'A pulsing circle. Shrinking and enlarging.'
     }
   ];
 
